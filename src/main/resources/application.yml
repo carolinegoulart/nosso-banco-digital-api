@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${MYSQL_HOST:localhost}:${MYSQL_PORT:5434}/digital_bank
+    username: ${MYSQL_USER:postgres}
+    password: ${MYSQL_PASS:3sf3r@}
+
+flyway:
+  url: jdbc:postgresql://${MYSQL_HOST:localhost}:${MYSQL_PORT:5434}/digital_bank
+  user: ${MYSQL_USER:postgres}
+  password: ${MYSQL_PASS:3sf3r@}
+  locations: classpath:/db/migration
+  schemas: otp
